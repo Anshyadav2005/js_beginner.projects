@@ -6,7 +6,7 @@ const totalImages = img.length;
 const imgWidth = 200;
 let index = 0;
 function imgMove() {
-  const movx = -index * imgWidth;
+  const movx = - index * imgWidth;
   track.style.transform = `translateX(${movx}px)`;
 }
 

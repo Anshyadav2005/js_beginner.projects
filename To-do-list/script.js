@@ -2,11 +2,7 @@ const input = document.querySelector("#task-input")
 const addbutton = document.querySelector("#add-item")
 
 
-addbutton.addEventListener("click",()=>{
-    const value = input.value.trim();
-
-    if (value ==="")return;
-
+function createTask(value){
     const div = document.createElement('div');
     div.className = 'tags';
 
@@ -18,17 +14,40 @@ addbutton.addEventListener("click",()=>{
     remove.className="remove-item";
     remove.textContent="remove";
 
-
+    
     remove.addEventListener("click",()=>{
         div.remove();
+        localStorage.removeItem(value);
+        
     })
-
+    
     div.append(span,remove);
     document.body.appendChild(div);
+}
+function addTask(){
+    const value = input.value.trim();
+    
+    if (value ==="")return;
+    
+    localStorage.setItem(value , JSON.stringify(value)) || [];
+    createTask(value);
 
     input.value ="";
-})
+}
+function relode (){
+    for (let index = 0; index < localStorage.length; index++) {
+        let key = localStorage.key(index);
+        let value = localStorage.getItem(key);
 
+        createTask(value);
+        
+    }
+}
+
+addbutton.addEventListener("click",()=>{
+    addTask();
+})
+relode();
 
 
 

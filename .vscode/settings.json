@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/TIK_TAK_TOE/index.html"
+  "livePreview.defaultPreviewPath": "/TIK_TAK_TOE/index.html",
+  "liveServer.settings.port": 5501
 }
