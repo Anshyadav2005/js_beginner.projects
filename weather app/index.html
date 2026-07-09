@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h3 id="heading">Weather App</h3>
+      <section class="display">
+        <form>
+          <input
+            type="text"
+            name="location"
+            placeholder="Enter your location"
+            autocomplete="off"
+          />
+          <button type="submit" id="search-butt">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <div class="display-screen">
+          <img src="enterlocation.png" alt="weather image" class="screen-img" />
+          <span class="weather">Weather</span>
+          <div class="bottom-readings">
+            <div>
+              <i class="fa-solid fa-water"></i>
+              <span class="humidity">Humidity</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-wind"></i>
+              <span class="wind-speed">Wind Speed</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
